@@ -57,7 +57,6 @@ var http = require("http"),
     function onRequest(req,res){
         //设置字符串编码，否则中文会出现乱码
         res.writeHead(200,{'Content-Type':'text/html;charset=utf-8'});
-
         superagent.get(originUrl)
 	        .end(function(err,pres){
                 console.log('fetch ' + originUrl + ' successful');
